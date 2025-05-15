@@ -19,7 +19,7 @@ sudo systemctl start docker
 sudo docker run hello-world
 
 sudo apt install python3-pip
-pip3 install vcstool
+pip3 install vcstool -y
 echo export PATH=$HOME/.local/bin:$PATH >> ~/.bashrc
 source ~/.bashrc
 
@@ -39,8 +39,8 @@ sudo bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 #Install VS Code
 sudo apt update
 sudo apt install software-properties-common apt-transport-https wget -y
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -y
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" -y
 sudo apt install code -y
 
 #Build Docker Container
